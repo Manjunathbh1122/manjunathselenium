@@ -7,10 +7,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import objectRepository.ContactPage;
@@ -33,7 +33,7 @@ public class BaseClass {
 
 	
 	
-	@BeforeSuite(alwaysRun=true)
+	@BeforeClass(alwaysRun=true)
 	public void LaunchingTheBrowser() {
 		utility=new PropertyUtitilty();
 		if(utility.readingDataFromPropertFile("browser").equals("chromee")) {
@@ -79,7 +79,7 @@ public class BaseClass {
 	public void loggingOut() {  
 		System.out.println("logged out");
 	}
-	@AfterSuite
+	@AfterClass
 	public void tearDownTheBrowser() {
 		ut.mouseHoverOnElement(ogpage.getAdministratorIcon());
 		ogpage.getSignout().click();

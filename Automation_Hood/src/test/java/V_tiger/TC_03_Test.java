@@ -30,7 +30,7 @@ public class TC_03_Test extends BaseClass {
 
 			e.printStackTrace();
 		}
-		ut.switchToAlert().accept();
+		//ut.switchToAlert().accept();
 	
 		
 		
