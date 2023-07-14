@@ -8,5 +8,6 @@ public class Testcase extends BaseClass {
 	@Test
 public void demo() {
 	System.out.println("testcase");
+	System.out.println("Simply added ");
 }
 }
