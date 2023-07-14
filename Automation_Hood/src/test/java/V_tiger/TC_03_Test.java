@@ -25,7 +25,8 @@ public class TC_03_Test extends BaseClass {
 		ListenerIplementation.logger.log(Status.INFO,"Clicked on save button ");
 		
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(2000); 
+			 
 		} catch (InterruptedException e) {
 
 			e.printStackTrace();
